@@ -17,7 +17,7 @@
 import classNames from "classnames";
 import * as React from "react";
 
-import { Error, type IconName, InfoSign, Tick, WarningSign } from "@blueprintjs/icons";
+import { Icon } from "@blueprintjs/icons";
 
 import {
     AbstractPureComponent,
@@ -95,7 +95,7 @@ export class Callout extends AbstractPureComponent<CalloutProps> {
             return undefined;
         }
 
-        const iconProps = { "aria-hidden": true, tabIndex: -1 };
+        const iconProps = { "aria-hidden": true, tabIndex: -1, size: 20};
 
         // 2. icon specified by name or as a custom SVG element
         if (icon !== undefined) {
@@ -105,13 +105,13 @@ export class Callout extends AbstractPureComponent<CalloutProps> {
         // 3. icon specified by intent prop
         switch (intent) {
             case Intent.DANGER:
-                return <Error {...iconProps} />;
+                return <Icon icon="error" {...iconProps} />;
             case Intent.PRIMARY:
-                return <InfoSign {...iconProps} />;
+                return <Icon icon="info-sign" {...iconProps} />;
             case Intent.WARNING:
-                return <WarningSign {...iconProps} />;
+                return <Icon icon="warning" {...iconProps} />;
             case Intent.SUCCESS:
-                return <Tick {...iconProps} />;
+                return <Icon icon="tick" {...iconProps} />;
             default:
                 return undefined;
         }
