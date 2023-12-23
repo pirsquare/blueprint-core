@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@blueprintjs/colors": "^5.0.8",
-    "@blueprintjs/icons": "^5.5.0",
+    "@blueprintjs/icons": "https://github.com/pirsquare/blueprint-icons",
     "@popperjs/core": "^2.11.7",
     "classnames": "^2.3.1",
     "normalize.css": "^8.0.1",
